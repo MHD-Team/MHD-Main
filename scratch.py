@@ -1,3 +1,10 @@
 import sqlite3
-conn = sqlite3.connect('mhd.db')
-conn.execute("""DROP TABLE USERS""")
+from insert_functions import *
+# conn = sqlite3.connect('mhd.db')
+# cursor = conn.execute("SELECT COUNT(1) FROM USERS \
+#             WHERE name = 'Niklas' \
+#             AND password = '456'")
+
+
+# for row in cursor:
+# 	print(row)

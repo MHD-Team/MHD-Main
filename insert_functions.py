@@ -21,8 +21,16 @@ def delete_from_table(*tables):
             conn.execute(f"DELETE from {table};")
       print("Records from tables deleted successfully")
 
-def delete_user(id):
+def delete_user(name):
       conn.execute("DELETE FROM USERS \
-            WHERE id = "+str(id))
+            WHERE name = '"+name+"'")
 
       print(f"User with id {id} deleted")
+
+def check_password(name, password):
+      cursor = conn.execute("SELECT COUNT(1) FROM USERS \
+            WHERE name = '"+name+"' \
+            AND password = '"+password+"'")
+      for row in cursor:
+            return row[0]
+
