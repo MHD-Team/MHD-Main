@@ -21,11 +21,12 @@ def delete_from_table(*tables):
             conn.execute(f"DELETE from {table};")
       print("Records from tables deleted successfully")
 
-def delete_user(name):
+def delete_user(id, name):
       conn.execute("DELETE FROM USERS \
-            WHERE name = '"+name+"'")
+            WHERE name = '"+name+"' \
+            AND id = "+str(id))
 
-      print(f"User with id {id} deleted")
+      print(f"User {name} deleted")
 
 def check_password(name, password):
       cursor = conn.execute("SELECT COUNT(1) FROM USERS \
@@ -34,3 +35,13 @@ def check_password(name, password):
       for row in cursor:
             return row[0]
 
+def total_points(id):
+      cursor = conn.execute("SELECT SUM(Points) FROM Protocoll \
+                  WHERE id = "+str(id))
+
+      for row in cursor:
+            total = row[0]
+            if total == None:
+                  total = 0
+
+            return total
