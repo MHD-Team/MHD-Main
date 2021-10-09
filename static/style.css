@@ -24,6 +24,8 @@ div.main{
 }
 div.abmelden{
     text-align: right;
+    justify-content: space-between;
+    display: flex;
 }
 div.neu{
     text-align: left;

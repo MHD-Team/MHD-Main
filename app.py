@@ -70,6 +70,11 @@ def create():
             if request.form['password'] ==  request.form['passwordrepeat']:
                   try:
                         insert_user(request.form['username'], request.form['password'])
+                        correct, id_ = check_password(request.form['username'], request.form['password'])
+                        user = User()
+                        user.id = id_
+                        login_user(user)
+                        return redirect("/mhd", code=302)
                   except:
                         flash("Username taken")
 
