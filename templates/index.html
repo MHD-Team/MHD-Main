@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
         </style>
         <link rel="shortcut icon" type="image/x-icon" href="favicon alpaka.jpg">
         <title>
@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="navigation">
-            <a href="punkte.html">
+            <a href="/">
                 Home
             </a>
         </div>
@@ -19,11 +19,11 @@
             <h1>
                  Was ist das MHD vom Produkt?
             </h1>
-                <input type="date">
-        <div class="eingabe">
-            <a href="Punkte 2.html">
-                 Prüfen
-            </a>
-        </div>
+            <form action="mhd" method="POST">
+                <input type="date" name="date">
+                <div class="eingabe">
+                    <input type="submit" name="Prüfen">
+                </div>
+            </form>
     </body>
 </html>

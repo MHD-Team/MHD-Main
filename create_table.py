@@ -19,7 +19,7 @@ def create_protocoll():
 	conn = sqlite3.connect('mhd.db')
 
 	print("Opened database successfully")
-
+	
 	conn.execute("""CREATE TABLE IF NOT EXISTS PROTOCOLL
 	         (ID             INT     NOT NULL,
 	         CURRENTDATE     DATE    NOT NULL,
