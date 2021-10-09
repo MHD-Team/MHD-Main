@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "sourcesanspro bold";
+    src: url(fonts/SourceSansPro-Bold.ttf);
+}
+body{
+   
+    text-align: center;
+    font-family: "sourcesanspro bold";
+    background-color: #e0e5ea;
+    background-image: url(JH-Pattern.svg);
+    background-size: 95px;
+    background-blend-mode: normal;
+    font-size: 2.25em;
+}
+p{
+    margin: 7.5px ;
+}
+div.navigation{
+    text-align: left;
+}
+div.main{
+    max-width: 675px;
+    margin:30px auto ;
+}
+div.abmelden{
+    text-align: right;
+}
+div.neu{
+    text-align: left;
+}
+div.anmelden{
+    text-align: right;
+}
+div.registrieren{
+    text-align: center;
+}
+div.eingabe{
+    text-align: center;
+}
+div.zurück{
+    text-align: left;
+}
+div.login{
+    text-align: center;
+}
+.flashes{
+    list-style: none;
+    color: darkred;
+    font-size: 32;
+}

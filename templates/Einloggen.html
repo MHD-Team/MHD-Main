@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+        </style>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon alpaka.jpg">
+        <title>
+            MHD Spiel
+        </title>
+    </head>
+    <body>
+        <div class="zurück">
+            <a href="Profil.html">
+                Zurück
+            </a>
+        </div>
+        <h1>
+            Melde dich an.
+        </h1>
+        <form action="login" method="POST">
+            <p>
+                <label>Benutzername
+                    <input type="text" name="username">
+                </label>
+            </p>
+            <p>
+                <label>Passwort
+                    <input type="password" name="password">
+                </label>
+            </p>
+            <div class="login">
+                <input type="submit" value="Anmelden">
+            </div>
+        </form>
+    </body>
+</html>

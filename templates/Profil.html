@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
+        </style>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon alpaka.jpg">
+        <title>
+            MHD Spiel
+        </title>
+    </head>
+    <body>
+        <div class="anmelden">
+            <a href="login">
+                Login
+            </a>
+        </div>
+        <h1>
+            Erstelle dein Profil.
+        </h1>
+        <form action="create" method="POST">
+            <p>
+                <label>Benutzername
+                    <input type="text" name="username">
+                </label>
+            </p>
+            <p>
+                <label>Passwort
+                    <input type="password" name="password">
+                </label>
+            </p>
+            <p>
+                <label>Passwort Wiederholung
+                    <input type="password" name="passwordrepeat">
+                 </label>
+            </p>
+            <div class="registrieren">
+                <input label="Registrieren" type="submit">
+            </div>
+        </form>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </body>
+</html>

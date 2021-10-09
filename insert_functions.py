@@ -1,12 +1,15 @@
 import sqlite3
 conn = sqlite3.connect('mhd.db')
 
-def insert_user(id, name, password):
+def insert_user(name, password):
+      global users
+      users = count_users()
       conn.execute("INSERT INTO USERS (ID,NAME,PASSWORD) \
-            VALUES ("+str(id)+", '"+name+"', '"+password+"')");
+            VALUES ("+str(users+1)+", '"+name+"', '"+password+"')");
 
       conn.commit()
       print(f"User {name} created")
+      users += 1
 
 
 def insert_entry(id, currentdate, mhd, points):
@@ -22,11 +25,13 @@ def delete_from_table(*tables):
       print("Records from tables deleted successfully")
 
 def delete_user(id, name):
+      global users
       conn.execute("DELETE FROM USERS \
             WHERE name = '"+name+"' \
             AND id = "+str(id))
 
       print(f"User {name} deleted")
+      users -= 1
 
 def check_password(name, password):
       cursor = conn.execute("SELECT COUNT(1) FROM USERS \
@@ -45,3 +50,15 @@ def total_points(id):
                   total = 0
 
             return total
+
+def count_users():
+      cursor = conn.execute("SELECT MAX(ID) FROM USERS")
+      for row in cursor:
+            cu = row[0]
+            if cu == None:
+                  cu = 0
+            return cu
+
+if __name__ == "__main__":
+      
+      print(users)

@@ -7,7 +7,7 @@ def create_users():
 
 	conn.execute("""CREATE TABLE IF NOT EXISTS USERS
 	         (ID INT PRIMARY KEY     NOT NULL,
-	         NAME           TEXT    NOT NULL,
+	         NAME TEXT   UNIQUE NOT NULL,
 	         PASSWORD       TEXT    NOT NULL);""")
 	print("Table Users created successfully")
 
