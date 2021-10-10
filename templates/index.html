@@ -20,7 +20,7 @@
                  Was ist das MHD vom Produkt?
             </h1>
             <form action="mhd" method="POST">
-                <input type="date" name="date">
+                <input type="date" name="date" min="2021-08-01" id="date">
                 <div class="eingabe">
                     <input type="submit" name="Prüfen">
                 </div>
@@ -40,6 +40,13 @@
                 }
                 let image = document.getElementById("image");
                 image.src = randomizer()
+
+                let d = new Date();
+                let month = (d.getMonth() + 1) - 2;
+                let year = d.getFullYear();
+                let date = document.getElementById("date")
+                date.min = year+"-"+"0"+month+"-"+"01"
+                console.log(date.min)
             </script>
     </body>
 </html>
