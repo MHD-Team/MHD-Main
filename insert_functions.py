@@ -31,7 +31,7 @@ def delete_user(id, name):
             AND id = "+str(id))
 
       print(f"User {name} deleted")
-      users -= 1
+      # users -= 1
 
 def check_password(name, password):
       cursor = conn.execute("SELECT COUNT(1) FROM USERS \
@@ -60,5 +60,4 @@ def count_users():
             return cu
 
 if __name__ == "__main__":
-      
       print(users)
