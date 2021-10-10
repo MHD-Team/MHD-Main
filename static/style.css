@@ -53,6 +53,11 @@ div.login{
 div.spiel{
     text-align: left;
 }
+
+div.spiel2{
+    text-align: center;
+}
+
 div.spiel1{
     text-align: left;
     justify-content: space-between;
