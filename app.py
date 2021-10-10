@@ -77,6 +77,8 @@ def create():
                         return redirect("/mhd", code=302)
                   except:
                         flash("Username taken")
+            else:
+                 flash("Passwords don't match") 
 
       return render_template("Profil.html")
 
