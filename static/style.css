@@ -53,3 +53,13 @@ div.login{
 div.spiel{
     text-align: left;
 }
+div.spiel1{
+    text-align: left;
+    justify-content: space-between;
+    display: flex;
+}
+div.antwort{
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+}
