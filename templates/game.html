@@ -3,6 +3,11 @@
 <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
 <script>
 
+fetch("/totalpoints").then(response => response.json())
+  .then(data =>{ if (data < 10){alert("You don't have enough points");window.location = "/"}
+    else {fetch("/minuspoints/10")}
+  });
+
 function setup() {
   createCanvas(400, 400);
 }
