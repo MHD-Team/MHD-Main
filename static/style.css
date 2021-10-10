@@ -51,5 +51,7 @@ div.login{
     font-size: 32;
 }
 div.spiel{
-    text-align: left;
+    text-align: center;
+    border: 2px solif red;
+    border-radius:  5px;
 }

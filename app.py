@@ -133,7 +133,10 @@ def points(pluspoints):
 
 @app.route("/")
 def home():
-      return render_template("Punkte.html", total=total_points(current_user.id))
+      try:
+            return render_template("Punkte.html", total=total_points(current_user.id))
+      except:
+            return redirect("/create")
 
 @app.route("/logout")
 def logout():
