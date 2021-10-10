@@ -25,5 +25,21 @@
                     <input type="submit" name="Prüfen">
                 </div>
             </form>
+            <img src="blank.png" alt="image" id="image">
+            <script type="text/javascript">
+                let list = ["https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(4).png",
+                            "https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(5).png",
+                            "https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(6).png",
+                            "https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(7).png",
+                            "https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(8).png",
+                            "https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(9).png",
+                            "https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(10).png"
+                            ]
+                function randomizer() {
+                    return list[Math.floor(Math.random() * list.length)]
+                }
+                let image = document.getElementById("image");
+                image.src = randomizer()
+            </script>
     </body>
 </html>
