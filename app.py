@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, g, flash, redirect
+from flask import Flask, render_template, request, g, flash, redirect, jsonify
 import sqlite3
 from flask_login import LoginManager, login_user, UserMixin, current_user, logout_user
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta, date
 
 DATABASE = 'mhd.db'
 login_manager = LoginManager()
@@ -142,6 +142,23 @@ def home():
 def logout():
       logout_user()
       return redirect("/create", code=302)
+
+@app.route("/spiele")
+def spiele():
+      return render_template("Spielesammlung.html")
+
+@app.route("/totalpoints")
+def totalpoints():
+      return jsonify(total_points(current_user.id))
+
+@app.route("/minuspoints/<points>")
+def minuspoints(points):
+      insert_entry(current_user.id, date.today().strftime('%d.%m.%Y'), date.today().strftime('%d.%m.%Y'), -int(points))
+      return totalpoints()
+
+@app.route("/game")
+def game():
+      return render_template("game.html")
 
 if __name__ == "__main__":
       app.run(debug=True)

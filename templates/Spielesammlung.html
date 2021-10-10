@@ -11,19 +11,29 @@
     </head>
     <body>
         <div class="zurück">
-            <a href="punkte.html">
+            <a href="/">
                 zurück
             </a>
         </div>
-        <img src="images/art (13).png" alt="Brickgame Vorschau">
+        <img src="https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(13).png" alt="Brickgame Vorschau">
         <div class="spiel1">
-            <a href="Abzug Punkte.html">
+            <a onclick="check()" href="#!">
                 Brickbreaker
             </a>
             <a href="Abzug Punkte.html">
                 2 Spiel
             </a>
         </div>
+        <script type="text/javascript">
+            function check() {
+                if (confirm('Are you sure to use 10 points?')) {
+                    fetch("/minuspoints/10")
+                    window.location.replace("/game")
+                } else {
+                    window.open("/","_self")
+                }
+            }
+        </script>
     </body>
 
 </html>
