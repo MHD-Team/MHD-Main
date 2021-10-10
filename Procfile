@@ -1,1 +1,1 @@
-worker: waitress-serve app:app
+worker: waitress-serve app: app
