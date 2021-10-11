@@ -4,6 +4,7 @@ from flask_login import LoginManager, login_user, UserMixin, current_user, logou
 from datetime import datetime,timedelta, date
 import os
 
+
 DATABASE = '/home/mhdscanner/MHD-Main/mhd.db'
 login_manager = LoginManager()
 app = Flask(__name__)
@@ -20,7 +21,10 @@ class User(UserMixin):
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
-      db = g._database = sqlite3.connect(DATABASE)
+      try:
+            db = g._database = sqlite3.connect(DATABASE)
+      except:
+            db = g._database = sqlite3.connect("mhd.db")
     return db
 
 def count_users():
