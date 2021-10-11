@@ -4,7 +4,7 @@ from flask_login import LoginManager, login_user, UserMixin, current_user, logou
 from datetime import datetime,timedelta, date
 import os
 
-DATABASE = 'sqlite:///var/www/mhd.db'
+DATABASE = 'sqlite:///home/mhdscanner/MHD-Main/mhd.db'
 login_manager = LoginManager()
 app = Flask(__name__)
 login_manager.init_app(app)
