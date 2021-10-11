@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, g, flash, redirect, jsonify
 import sqlite3
 from flask_login import LoginManager, login_user, UserMixin, current_user, logout_user
 from datetime import datetime,timedelta, date
+import os
 
 DATABASE = 'mhd.db'
 login_manager = LoginManager()
@@ -161,4 +162,4 @@ def game():
       return render_template("game.html")
 
 if __name__ == "__main__":
-      app.run(host='0.0.0.0')
+      app.run(debug=True)
