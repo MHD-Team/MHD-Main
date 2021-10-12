@@ -26,4 +26,4 @@ if __name__ == "__main__":
    read_users()
    read_protocoll()
 
-   conn.close()  
+   conn.close()

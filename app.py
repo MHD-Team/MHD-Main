@@ -1,11 +1,23 @@
 from flask import Flask, render_template, request, g, flash, redirect, jsonify
 import sqlite3
 from flask_login import LoginManager, login_user, UserMixin, current_user, logout_user
-from datetime import datetime,timedelta, date
+from datetime import datetime, date
 import os
+from os.path import join, dirname
+from dotenv import load_dotenv, find_dotenv
+from filestack import Client, Security, Filelink
+
+load_dotenv(find_dotenv())
+APIKEY = os.environ.get("APIKEY")
+APPSECRET = os.environ.get("APPSECRET")
+HANDLE = os.environ.get("HANDLE")
+
+policy = {"expiry":1735689600,"handle":HANDLE}
+security = Security(policy, APPSECRET)
 
 
-DATABASE = '/home/mhdscanner/MHD-Main/mhd.db'
+
+DATABASE = 'mhd.db'
 login_manager = LoginManager()
 app = Flask(__name__)
 login_manager.init_app(app)
@@ -21,10 +33,7 @@ class User(UserMixin):
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
-      try:
-            db = g._database = sqlite3.connect(DATABASE)
-      except:
-            db = g._database = sqlite3.connect("mhd.db")
+      db = g._database = sqlite3.connect(DATABASE)
     return db
 
 def count_users():
@@ -56,6 +65,14 @@ def insert_user(name, password):
       print(f"User {name} created")
       users += 1
 
+      filelink = Filelink(HANDLE)
+
+      filelink.overwrite(filepath=DATABASE, security=security)
+      filelink.signed_url(security=security)
+
+      filelink.download(DATABASE)
+
+
 @app.teardown_appcontext
 def close_connection(exception):
     db = getattr(g, '_database', None)
@@ -68,6 +85,14 @@ def insert_entry(id, currentdate, mhd, points):
 
       get_db().commit()
       print(f"Entry with id {id} created")
+
+      filelink = Filelink(HANDLE)
+
+      filelink.overwrite(filepath=DATABASE, security=security)
+      filelink.signed_url(security=security)
+
+      filelink.download(DATABASE)
+
 
 @app.route("/create", methods=['POST', 'GET'])
 def create():
@@ -109,6 +134,8 @@ def total_points(id):
 @app.route("/login", methods=['POST', 'GET'])
 def login():
       if request.method == "POST":
+            filelink = Filelink(HANDLE)
+            filelink.download(DATABASE)
             correct, id_ = check_password(request.form['username'], request.form['password'])
             if bool(correct):
                   user = User()
@@ -146,6 +173,8 @@ def home():
 @app.route("/logout")
 def logout():
       logout_user()
+      if os.path.exists(DATABASE):
+            os.remove(DATABASE)
       return redirect("/create", code=302)
 
 @app.route("/spiele")
@@ -164,6 +193,11 @@ def minuspoints(points):
 @app.route("/game")
 def game():
       return render_template("game.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template("404.html"), 404
 
 if __name__ == "__main__":
       app.run(debug=True)
