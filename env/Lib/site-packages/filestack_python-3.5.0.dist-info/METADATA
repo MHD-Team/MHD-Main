@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: filestack-python
+Version: 3.5.0
+Summary: Filestack Python SDK
+Home-page: https://github.com/filestack/filestack-python
+Author: filestack.com
+Author-email: support@filestack.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: trafaret (==2.0.2)
+
+Visit: https://github.com/filestack/filestack-python
+
+
