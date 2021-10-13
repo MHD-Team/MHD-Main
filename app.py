@@ -97,8 +97,10 @@ def insert_entry(id, currentdate, mhd, points):
 @app.route("/create", methods=['POST', 'GET'])
 def create():
       if request.method == "POST":
-            if request.form['password'] ==  request.form['passwordrepeat']:
+            if request.form['password'] == request.form['passwordrepeat']:
                   try:
+                        filelink = Filelink(HANDLE)
+                        filelink.download(DATABASE)
                         insert_user(request.form['username'], request.form['password'])
                         correct, id_ = check_password(request.form['username'], request.form['password'])
                         user = User()
