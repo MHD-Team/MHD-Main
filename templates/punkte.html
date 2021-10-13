@@ -1,29 +1,32 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
-        </style>
-        <link rel="shortcut icon" type="image/x-icon" href="static/favicon alpaka.jpg">
-        <title>
-            MHD Spiel
-        </title>
-    </head>
-    <body>
-            <div class=abmelden>
-                <a href="logout">
-                    Abmelden
-                </a>
-                <a href="mhd">
-                    Neues Produkt
-                </a>
-            </div>  
-        <h1>
-            Du hast insgesamt {{total}} Punkte.
-        </h1>
-        <div class=spiel2>
-            <a href="spiele">
-                Spiel
-            </a>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="static/favicon alpaka.jpg">
+    <title>
+        MHD Spiel
+    </title>
+</head>
+
+<body>
+    <div class=abmelden>
+        <a href="logout">
+            Abmelden
+        </a>
+        <a href="mhd">
+            Neues Produkt
+        </a>
+    </div>
+    <h1>
+        Du hast insgesamt {{total}} Punkte.
+    </h1>
+    <div class=spiel2>
+        <a href="spiele">
+            Spiel
+        </a>
+</body>
+
 </html>

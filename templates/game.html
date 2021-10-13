@@ -1,98 +1,100 @@
 <html>
+
 <head>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
-<link rel="shortcut icon" type="image/x-icon" href="static/favicon alpaka.jpg">
-<script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="static/favicon alpaka.jpg">
+    <script>
+    fetch("/totalpoints").then(response => response.json())
+        .then(data => {
+            if (data < 10) { alert("You don't have enough points");
+                window.location = "/" } else { fetch("/minuspoints/10") }
+        });
 
-fetch("/totalpoints").then(response => response.json())
-  .then(data =>{ if (data < 10){alert("You don't have enough points");window.location = "/"}
-    else {fetch("/minuspoints/10")}
-  });
-
-function setup() {
-  createCanvas(400, 400);
-}
-
-var x = 200;
-
-var y = 300;
-
-var xg = Math.random() * 2 - 1;
-
-var yg = Math.random() * 2 + 1;
-
-isDestroyed = [
-  [false, false, false, false, false],
-  [false, false, false, false, false],
-];
-
-function draw() {
-  background(220);
-  for (i = 0; i < 5; i++) {
-    if (!isDestroyed[0][i]) {
-      rect(i * 85, 200, 60, 20);
+    function setup() {
+        createCanvas(400, 400);
     }
-    if (!isDestroyed[1][i]) {
-      rect(i * 85, 175, 60, 20);
+
+    var x = 200;
+
+    var y = 300;
+
+    var xg = Math.random() * 2 - 1;
+
+    var yg = Math.random() * 2 + 1;
+
+    isDestroyed = [
+        [false, false, false, false, false],
+        [false, false, false, false, false],
+    ];
+
+    function draw() {
+        background(220);
+        for (i = 0; i < 5; i++) {
+            if (!isDestroyed[0][i]) {
+                rect(i * 85, 200, 60, 20);
+            }
+            if (!isDestroyed[1][i]) {
+                rect(i * 85, 175, 60, 20);
+            }
+        }
+        circle(x, y, 20);
+        rect(mouseX, 380, 60, 10);
+
+        if (mouseX < x && x < mouseX + 60 && 380 < y && y < 390) {
+            yg = -1 * yg;
+            // xg = -1 * xg
+        }
+
+        for (i = 0; i < 5; i++) {
+            if (
+                x > i * 85 &&
+                y > 200 &&
+                x < 60 + i * 85 &&
+                y < 220 &&
+                !isDestroyed[0][i]
+            ) {
+                yg = -1 * yg;
+                isDestroyed[0][i] = true;
+            }
+            if (
+                x > i * 85 &&
+                y > 175 &&
+                x < 60 + i * 85 &&
+                y < 195 &&
+                !isDestroyed[1][i]
+            ) {
+                yg = -1 * yg;
+                isDestroyed[1][i] = true;
+            }
+        }
+        if (y < 0) {
+            textSize(100);
+            text("WINNER", 0, 150);
+        }
+        if (y > 400) {
+            textSize(100);
+            text("LOOSER", 0, 150);
+        }
+
+        if (x < 0 || x > 400) {
+            xg = xg * -1;
+        }
+
+        x = x + xg;
+        y = y + yg;
     }
-  }
-  circle(x, y, 20);
-  rect(mouseX, 380, 60, 10);
-
-  if (mouseX < x && x < mouseX + 60 && 380 < y && y < 390) {
-    yg = -1 * yg;
-    // xg = -1 * xg
-  }
-
-  for (i = 0; i < 5; i++) {
-    if (
-      x > i * 85 &&
-      y > 200 &&
-      x < 60 + i * 85 &&
-      y < 220 &&
-      !isDestroyed[0][i]
-    ) {
-      yg = -1 * yg;
-      isDestroyed[0][i] = true;
-    }
-    if (
-      x > i * 85 &&
-      y > 175 &&
-      x < 60 + i * 85 &&
-      y < 195 &&
-      !isDestroyed[1][i]
-    ) {
-      yg = -1 * yg;
-      isDestroyed[1][i] = true;
-    }
-  }
-  if (y < 0) {
-    textSize(100);
-    text("WINNER", 0, 150);
-  }
-  if (y > 400) {
-    textSize(100);
-    text("LOOSER", 0, 150);
-  }
-
-  if (x < 0 || x > 400) {
-    xg = xg * -1;
-  }
-
-  x = x + xg;
-  y = y + yg;
-}
-</script>
+    </script>
 </head>
- <body>
-  <div class="zurück">
-    <a href="/">
-        Zurück
-    </a>
-</div>
+
+<body>
+    <div class="zurück">
+        <a href="/">
+            Zurück
+        </a>
+    </div>
     <main>
     </main>
-  </body>
-</html>
+</body>
 
+</html>

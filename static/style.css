@@ -2,8 +2,9 @@
     font-family: "sourcesanspro bold";
     src: url(fonts/SourceSansPro-Bold.ttf);
 }
-body{
-   
+
+body {
+
     text-align: center;
     font-family: "sourcesanspro bold";
     background-color: #e0e5ea;
@@ -12,58 +13,71 @@ body{
     background-blend-mode: normal;
     font-size: 2.25em;
 }
-p{
-    margin: 7.5px ;
+
+p {
+    margin: 7.5px;
 }
-div.navigation{
+
+div.navigation {
     text-align: left;
 }
-div.main{
+
+div.main {
     max-width: 675px;
-    margin:30px auto ;
+    margin: 30px auto;
 }
-div.abmelden{
+
+div.abmelden {
     text-align: right;
     justify-content: space-between;
     display: flex;
 }
-div.neu{
+
+div.neu {
     text-align: left;
 }
-div.anmelden{
+
+div.anmelden {
     text-align: right;
 }
-div.registrieren{
+
+div.registrieren {
     text-align: center;
 }
-div.eingabe{
+
+div.eingabe {
     text-align: center;
 }
-div.zurück{
+
+div.zurück {
     text-align: left;
 }
-div.login{
+
+div.login {
     text-align: center;
 }
-.flashes{
+
+.flashes {
     list-style: none;
     color: darkred;
     font-size: 32;
 }
-div.spiel{
+
+div.spiel {
     text-align: left;
 }
 
-div.spiel2{
+div.spiel2 {
     text-align: center;
 }
 
-div.spiel1{
+div.spiel1 {
     text-align: left;
     justify-content: space-between;
     display: flex;
 }
-div.antwort{
+
+div.antwort {
     text-align: center;
     justify-content: space-between;
     display: flex;

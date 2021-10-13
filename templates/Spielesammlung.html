@@ -1,38 +1,40 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"> 
-        </style>
-        <link rel="shortcut icon" type="image/x-icon" href="static/favicon alpaka.jpg">
-        <title>
-            MHD Spiel
-        </title>
-    </head>
-    <body>
-        <div class="zurück">
-            <a href="/">
-                zurück
-            </a>
-        </div>
-        <img src="https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(13).png" alt="Brickgame Vorschau">
-        <div class="spiel1">
-            <a onclick="check()" href="#!">
-                Brickbreaker
-            </a>
-            <a href="spiel2">
-                2 Spiel
-            </a>
-        </div>
-        <script type="text/javascript">
-            function check() {
-                if (confirm('Are you sure to use 10 points?')) {
-                    window.location.replace("/game")
-                } else {
-                    window.open("/","_self")
-                }
-            }
-        </script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="static/favicon alpaka.jpg">
+    <title>
+        MHD Spiel
+    </title>
+</head>
+
+<body>
+    <div class="zurück">
+        <a href="/">
+            zurück
+        </a>
+    </div>
+    <img src="https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(13).png" alt="Brickgame Vorschau">
+    <div class="spiel1">
+        <a onclick="check()" href="#!">
+            Brickbreaker
+        </a>
+        <a href="spiel2">
+            2 Spiel
+        </a>
+    </div>
+    <script type="text/javascript">
+    function check() {
+        if (confirm('Are you sure to use 10 points?')) {
+            window.location.replace("/game")
+        } else {
+            window.open("/", "_self")
+        }
+    }
+    </script>
+</body>
 
 </html>
