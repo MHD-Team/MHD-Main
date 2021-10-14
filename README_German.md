@@ -3,7 +3,7 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
 [![Github language count](https://img.shields.io/github/languages/count/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
-[![Discord](https://img.shields.io/discord/897766520476827669?logo=discord)](https://discord.com/channels/897766520476827669/897766520476827672)
+[![Discord](https://img.shields.io/discord/897766520476827669?logo=discord&color=7289d9)](https://discord.com/channels/897766520476827669/897766520476827672)
 [![Code Style](https://img.shields.io/badge/code%20style-black-black?logo=python&logoColor=black)](https://github.com/psf/black)
 
 [**English Version**](https://github.com/MHD-Team/MHD-Main/blob/main/README.md)

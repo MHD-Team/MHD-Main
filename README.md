@@ -3,7 +3,7 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
 [![Github language count](https://img.shields.io/github/languages/count/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
-[![Discord](https://img.shields.io/discord/897766520476827669?logo=discord)](https://discord.com/channels/897766520476827669/897766520476827672)
+[![Discord](https://img.shields.io/discord/897766520476827669?logo=discord&color=7289d9)](https://discord.com/channels/897766520476827669/897766520476827672)
 [![Code Style](https://img.shields.io/badge/code%20style-black-black?logo=python&logoColor=black)](https://github.com/psf/black)
 
 [**German Version**](https://github.com/MHD-Team/MHD-Main/blob/main/README_German.md)
@@ -11,7 +11,7 @@
 <sup>This project was originally made for <a href="https://jugendhackt.org/events/berlin/">Jugend hackt Berlin</a> by <a href="https://github.com/orgs/MHD-Team/people/Tams-Tams">Math</a>, <a href="https://github.com/orgs/MHD-Team/people/Nino6781">Nino6781</a>, <a href="https://github.com/orgs/MHD-Team/people/Joshuawwolf">joshua</a> and Farhan.</sup>
 
 <details>
-    <summary><span style="cursor:pointer;color:blue;text-decoration:underline;">Table of Contents</span></summary>
+    <summary>Table of Contents</summary>
     <ul>
         <li>1.0 <a href="#10-installing">Installing</a></li>
         <li>2.0 <a href="#20-contributing">Contributing</a></li>
@@ -28,7 +28,7 @@
 
 <br>
 
-With the MHD-Scanner, you can get points and play games by buying Groceries which expired just a few days ago. Thus you encourage people to buy food which isn't spoiled, but Supermarkets still dispose, because not enough people are buying it. It's a Win-Win Situation, both for the people, who can play games and for the environment.
+With the MHD-Scanner, you can get points and play games by buying Groceries that expired just a few days ago. Thus you encourage people to buy food that isn't spoiled, but Supermarkets still dispose, because not enough people are buying it. It's a Win-Win Situation, both for the people, who can play games and for the environment.
 
 ---
 
@@ -118,7 +118,7 @@ We always welcome contributions. If you have any ideas or suggestions, please [p
 
 ### 3.1 Installation Errors
 **`'python' is not recognized as an internal or external command,
-operable program or batch file.`**  
+operable program, or batch file.`**  
 That means you haven't installed python correctly, or it's not in the PATH variable.  
 
 Try:
@@ -127,10 +127,10 @@ Try:
 - `py -V`
 - `python [PYTHONVERSION.PYTHONVERSION]` e.g. `python 3.10`
 
-If both commands doen't work, try to uninstall python and install it with the [instructions above](#11-installing).
+If both commands don't work, try to uninstall python and install it with the [instructions above](#11-installing).
 
 **`'pip' is not recognized as an internal or external command,
-operable program or batch file.`**  
+operable program, or batch file.`**  
 That means you haven't installed pip when you installed python, or it's not in the PATH variable.  
 
 Try:
@@ -141,7 +141,7 @@ Try:
 If both commands don't work, [install pip](https://pip.pypa.io/en/stable/installation/).
 
 ### 3.1 Other errors
-If you have any other errors, program or installing errors we didn't mention, don't hesitate to [open an issue](https://github.com/MHD-Team/MHD-Main/issues/new) with the tag bug.
+If you have any other errors, program, or installing errors we didn't mention, don't hesitate to [open an issue](https://github.com/MHD-Team/MHD-Main/issues/new) with the tag bug.
 Or write an e-mail to mhd.team[at]outlook.de
 
 ---
