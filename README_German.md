@@ -8,10 +8,10 @@
 
 [**English Version**](https://github.com/MHD-Team/MHD-Main/blob/main/README.md)
 
-<sup>This project was originally made for [Jugend hackt Berlin](https://jugendhackt.org/events/berlin/) by [Math](https://github.com/orgs/MHD-Team/people/Tams-Tams), [Nino6781](https://github.com/orgs/MHD-Team/people/Nino6781), [joshua](https://github.com/orgs/MHD-Team/people/Joshuawwolf) and Farhan.</sup>
+<sup>Dieses Projekt wurde ursprünglich für <a href="https://jugendhackt.org/events/berlin/">Jugend hackt Berlin</a> von <a href="https://github.com/orgs/MHD-Team/people/Tams-Tams">Math</a>, <a href="https://github.com/orgs/MHD-Team/people/Nino6781">Nino6781</a>, <a href="https://github.com/orgs/MHD-Team/people/Joshuawwolf">joshua</a> und Farhan erstellt.</sup>
 
-<details id="TOC">
-    <summary><a href="#" onclick="toggle()">Inhaltsverzeichnis</a></summary>
+<details>
+    <summary><span style="cursor:pointer;color:blue;text-decoration:underline;">Table of Contents</span></summary>
     <ul>
         <li>1.0 <a href="#10-installation">Installation</a></li>
         <li>2.0 <a href="#20-mitmachen">Mitmachen</a></li>
@@ -24,17 +24,6 @@
         <li>4.0 <a href="#40-links">Links</a></li>
     </ul>
 </details>
-
-<script>
-	var details = document.getElementById("TOC")
-	function toggle() {
-		if (details.hasAttribute("open")) {
-			details.removeAttribute('open')
-		} else {
-			details.setAttribute('open', 'true');
-		}
-	}
-</script>
 
 <br>
 
