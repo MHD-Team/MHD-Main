@@ -1,12 +1,12 @@
 # MHD-Scanner
-[![GitHub last commit](https://img.shields.io/github/last-commit/MHD-Team/MHD-Main?logo=github&logoColor=success)](https://github.com/MHD-Team/MHD-Main/commits/main)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main/commits/main)
-[![GitHub repo size](https://img.shields.io/github/repo-size/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
-[![Github language count](https://img.shields.io/github/languages/count/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Jugendhackt/MHD-Main?logo=github&logoColor=success)](https://github.com/MHD-Team/MHD-Main/commits/main)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Jugendhackt/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Jugendhackt/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
+[![Github language count](https://img.shields.io/github/languages/count/Jugendhackt/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
 [![Discord](https://img.shields.io/discord/897766520476827669?logo=discord&color=7289d9)](https://discord.com/channels/897766520476827669/897766520476827672)
 [![Code Style](https://img.shields.io/badge/code%20style-black-black?logo=python&logoColor=black)](https://github.com/psf/black)
 
-[**German Version**](https://github.com/MHD-Team/MHD-Main/blob/main/README_German.md)
+[**German Version**](https://github.com/Jugendhackt/MHD-Main/blob/main/README_German.md)
 
 <sup>This project was originally made for <a href="https://jugendhackt.org/events/berlin/">Jugend hackt Berlin</a> by <a href="https://github.com/orgs/MHD-Team/people/Tams-Tams">Math</a>, <a href="https://github.com/orgs/MHD-Team/people/Nino6781">Nino6781</a>, <a href="https://github.com/orgs/MHD-Team/people/Joshuawwolf">joshua</a> and Farhan.</sup>
 
@@ -33,7 +33,8 @@ With the MHD-Scanner, you can get points and play games by buying Groceries that
 ---
 
 ## 1.0 Installing
-The first step is to install python. This project probably needs python 3.5+, it was created with python 3.7. But you can install the latest version of python (currently 3.10.0).  
+First dwnload the repo.
+The next step is to install python. This project probably needs python 3.5+, it was created with python 3.7. But you can install the latest version of python (currently 3.10.0).  
 [Download Python](https://www.python.org/downloads/)  
 **Don't forget to tick "Add Python to PATH", "Add Python to environment variables" and "pip"**  
 
@@ -112,7 +113,7 @@ deactivate
 	```
 
 ## 2.0 Contributing
-We always welcome contributions. If you have any ideas or suggestions, please [post an issue](https://github.com/MHD-Team/MHD-Main/issues/new) first with the tag enhancement. If you want to solve an issue, please leave a comment that you've been working on it. If you have made changes yourself, make a new branch and make a [pull request](https://github.com/MHD-Team/MHD-Main/compare) and wait for one of the owners/members to merge it.
+We always welcome contributions. If you have any ideas or suggestions, please [post an issue](https://github.com/Jugendhackt/MHD-Main/issues/new) first with the tag enhancement. If you want to solve an issue, please leave a comment that you've been working on it. If you have made changes yourself, make a new branch and make a [pull request](https://github.com/Jugendhackt/MHD-Main/compare) and wait for one of the owners/members to merge it.
 
 ## 3.0 Troubleshooting
 
@@ -147,7 +148,7 @@ Or write an e-mail to mhd.team[at]outlook.de
 ---
 
 # 3.0 Reference
-Github: https://github.com/MHD-Team  
-License: https://github.com/MHD-Team/MHD-Main/blob/main/LICENSE  
+Github: https://github.com/Jugendhackt/MHD-Main  
+License: https://github.com/Jugendhackt/MHD-Main/blob/main/LICENSE  
 Discord: https://discord.com/channels/897766520476827669/897766520476827672  
 Jugend Hackt: https://jugendhackt.org/  
