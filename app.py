@@ -1,11 +1,26 @@
-from flask import Flask, render_template, request, g, flash, redirect, jsonify
+from flask import (  # type:ignore
+    Flask,
+    render_template,
+    request,
+    g,
+    flash,
+    redirect,
+    jsonify,
+)
 import sqlite3
-from flask_login import LoginManager, login_user, UserMixin, current_user, logout_user
+
+from flask_login import (  # type:ignore
+    LoginManager,
+    login_user,
+    UserMixin,
+    current_user,
+    logout_user,
+)
 from datetime import datetime, date
 import os
 from os.path import join, dirname
-from dotenv import load_dotenv, find_dotenv
-from filestack import Client, Security, Filelink
+from dotenv import load_dotenv, find_dotenv  # type:ignore
+from filestack import Client, Security, Filelink  # type:ignore
 
 load_dotenv(find_dotenv())
 APIKEY = os.environ.get("APIKEY")
@@ -16,7 +31,7 @@ policy = {"expiry": 1735689600, "handle": HANDLE}
 security = Security(policy, APPSECRET)
 
 
-DATABASE = 'mhd.db'
+DATABASE = "mhd.db"
 login_manager = LoginManager()
 app = Flask(__name__)
 login_manager.init_app(app)
@@ -28,7 +43,7 @@ class User(UserMixin):
 
 
 def get_db():
-    db = getattr(g, '_database', None)
+    db = getattr(g, "_database", None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
     return db
@@ -41,10 +56,11 @@ def count_users():
         if cu == None:
             cu = 0
         return cu
+    return 0
 
 
 def calculate(date):
-    date = datetime.strptime(date, '%Y-%m-%d')
+    date = datetime.strptime(date, "%Y-%m-%d")
     diffdate = date - datetime.today()
     return -diffdate.days if diffdate.days < 0 else 0
 
@@ -83,7 +99,7 @@ def insert_user(name, password):
 
 @app.teardown_appcontext
 def close_connection(exception):
-    db = getattr(g, '_database', None)
+    db = getattr(g, "_database", None)
     if db is not None:
         db.close()
 
@@ -112,16 +128,16 @@ def insert_entry(id, currentdate, mhd, points):
     filelink.download(DATABASE)
 
 
-@app.route("/create", methods=['POST', 'GET'])
+@app.route("/create", methods=["POST", "GET"])
 def create():
     if request.method == "POST":
-        if request.form['password'] == request.form['passwordrepeat']:
+        if request.form["password"] == request.form["passwordrepeat"]:
             try:
                 filelink = Filelink(HANDLE)
                 filelink.download(DATABASE)
-                insert_user(request.form['username'], request.form['password'])
+                insert_user(request.form["username"], request.form["password"])
                 correct, id_ = check_password(
-                    request.form['username'], request.form['password']
+                    request.form["username"], request.form["password"]
                 )
                 user = User()
                 user.id = id_
@@ -145,6 +161,7 @@ def check_password(name, password):
     )
     for row in cursor:
         return row[0], row[1]
+    return False, None
 
 
 def total_points(id):
@@ -160,13 +177,13 @@ def total_points(id):
         return total
 
 
-@app.route("/login", methods=['POST', 'GET'])
+@app.route("/login", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
         filelink = Filelink(HANDLE)
         filelink.download(DATABASE)
         correct, id_ = check_password(
-            request.form['username'], request.form['password']
+            request.form["username"], request.form["password"]
         )
         if bool(correct):
             user = User()
@@ -179,14 +196,17 @@ def login():
     return render_template("Einloggen.html")
 
 
-@app.route("/mhd", methods=['POST', 'GET'])
+@app.route("/mhd", methods=["POST", "GET"])
 def mhd():
     if request.method == "POST":
-        points = calculate(request.form["date"])
-        insert_entry(
-            current_user.id, str(datetime.today()), request.form["date"], points
-        )
-        return redirect("/points/" + str(points), code=302)
+        if request.form["date"] == "":
+            flash("Enter a Date")
+        else:
+            points = calculate(request.form["date"])
+            insert_entry(
+                current_user.id, str(datetime.today()), request.form["date"], points
+            )
+            return redirect("/points/" + str(points), code=302)
 
     return render_template("index.html")
 
@@ -228,8 +248,8 @@ def totalpoints():
 def minuspoints(points):
     insert_entry(
         current_user.id,
-        date.today().strftime('%d.%m.%Y'),
-        date.today().strftime('%d.%m.%Y'),
+        date.today().strftime("%d.%m.%Y"),
+        date.today().strftime("%d.%m.%Y"),
         -int(points),
     )
     return totalpoints()
