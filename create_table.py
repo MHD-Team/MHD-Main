@@ -2,7 +2,7 @@ import sqlite3
 
 
 def create_users():
-    conn = sqlite3.connect('mhd.db')
+    conn = sqlite3.connect("mhd.db")
 
     print("Opened database successfully")
 
@@ -18,7 +18,7 @@ def create_users():
 
 
 def create_protocoll():
-    conn = sqlite3.connect('mhd.db')
+    conn = sqlite3.connect("mhd.db")
 
     print("Opened database successfully")
 
@@ -32,8 +32,3 @@ def create_protocoll():
     print("Table protocoll created successfully")
 
     conn.close()
-
-
-if __name__ == "__main__":
-    create_users()
-    create_protocoll()

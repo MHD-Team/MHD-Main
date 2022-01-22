@@ -3,3 +3,4 @@ env/
 *.pyc
 *.pyo
 __pycache__/
+mhd.db

@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('mhd.db')
+conn = sqlite3.connect("mhd.db")
 
 
 def insert_user(name, password):
@@ -89,7 +89,4 @@ def count_users():
         if cu == None:
             cu = 0
         return cu
-
-
-if __name__ == "__main__":
-    print(users)
+    return 0
