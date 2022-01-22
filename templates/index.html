@@ -27,6 +27,15 @@
                 <input type="submit" name="Prüfen">
             </div>
         </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         <img src="blank.png" alt="image" id="image">
         <script type="text/javascript">
         let list = ["https://raw.githubusercontent.com/MHD-Team/blank/main/art%20(4).png",
