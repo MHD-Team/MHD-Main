@@ -1,14 +1,16 @@
 # MHD-Scanner
-[![GitHub last commit](https://img.shields.io/github/last-commit/MHD-Team/MHD-Main?logo=github&logoColor=success)](https://github.com/MHD-Team/MHD-Main/commits/main)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main/commits/main)
-[![GitHub repo size](https://img.shields.io/github/repo-size/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
-[![Github language count](https://img.shields.io/github/languages/count/MHD-Team/MHD-Main?logo=github&logoColor=blue)](https://github.com/MHD-Team/MHD-Main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Jugendhackt/MHD-Main?logo=github&logoColor=success)](https://github.com/Jugendhackt/MHD-Main/commits/main)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Jugendhackt/MHD-Main?logo=github&logoColor=blue)](https://github.com/Jugendhackt/MHD-Main/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Jugendhackt/MHD-Main?logo=github&logoColor=blue)](https://github.com/Jugendhackt/MHD-Main)
+[![Github language count](https://img.shields.io/github/languages/count/Jugendhackt/MHD-Main?logo=github&logoColor=blue)](https://github.com/Jugendhackt/MHD-Main)
 [![Discord](https://img.shields.io/discord/897766520476827669?logo=discord&color=7289d9)](https://discord.com/channels/897766520476827669/897766520476827672)
 [![Code Style](https://img.shields.io/badge/code%20style-black-black?logo=python&logoColor=black)](https://github.com/psf/black)
 
-[**English Version**](https://github.com/MHD-Team/MHD-Main/blob/main/README.md)
+[**English Version**](https://github.com/Jugendhackt/MHD-Main/blob/main/README.md)
 
-<sup>Dieses Projekt wurde ursprünglich für <a href="https://jugendhackt.org/events/berlin/">Jugend hackt Berlin</a> von <a href="https://github.com/orgs/MHD-Team/people/Tams-Tams">Math</a>, <a href="https://github.com/orgs/MHD-Team/people/Nino6781">Nino6781</a>, <a href="https://github.com/orgs/MHD-Team/people/Joshuawwolf">joshua</a> und Farhan erstellt.</sup>
+<sup>Dieses Projekt wurde ursprünglich für <a href="https://jugendhackt.org/events/berlin/">Jugend hackt Berlin</a> von <a href="https://github.com/orgs/MHD-Team/people/Tams-Tams">Math</a>, <a href="https://github.com/orgs/MHD-Team/people/Nino6781">Nino6781</a>, <a href="https://github.com/orgs/MHD-Team/people/Joshuawwolf">joshua</a> und Farhan erstellt.  
+Vielen Dank an usere Mentoren Jannik, Jörg und Liv, und an alle Leute die uns geholfen haben.
+</sup>
 
 <details>
     <summary><span style="cursor:pointer;color:blue;text-decoration:underline;">Table of Contents</span></summary>
@@ -33,7 +35,8 @@ Mit dem MHD-Scanner kannst du Punkte bekommen und Spiele spielen, indem du Leben
 ---
 
 ## 1.0 Installation
-Der erste Schritt ist die Installation von python. Dieses Projekt benötigt wahrscheinlich python 3.5+, es wurde mit python 3.7 erstellt. Du kannst aber die neueste Version von Python installieren (derzeit 3.10.0).  
+Zuerst müssen sie den Repo herunterladen.
+Der nächste Schritt ist die Installation von python. Dieses Projekt benötigt wahrscheinlich python 3.5+, es wurde mit python 3.7 erstellt. Du kannst aber die neueste Version von Python installieren (derzeit 3.10.0).  
 [Python herunterladen](https://www.python.org/downloads/)  
 **Vergiss nicht, "Add Python to PATH", "Add Python to environment variables" und "pip"** anzukreuzen.  
 
@@ -110,7 +113,7 @@ deactivate
 	```
 
 ## 2.0 Mitmachen
-Wir freuen uns immer über Beiträge. Wenn du irgendwelche Ideen oder Vorschläge hast, schreibe bitte zuerst einen [issue](https://github.com/MHD-Team/MHD-Main/issues/new) mit dem Tag enhancement. Wenn du ein Problem lösen willst, hinterlasse bitte einen Kommentar, dass du daran arbeitest. Wenn du selbst Änderungen vorgenommen hast, erstelle einen neuen branch und stelle einen [pull request](https://github.com/MHD-Team/MHD-Main/compare) und warte darauf, dass einer der Eigentümer/Mitglieder ihn zusammenführt.
+Wir freuen uns immer über Beiträge. Wenn du irgendwelche Ideen oder Vorschläge hast, schreibe bitte zuerst einen [issue](https://github.com/Jugendhackt/MHD-Main/issues/new) mit dem Tag enhancement. Wenn du ein Problem lösen willst, hinterlasse bitte einen Kommentar, dass du daran arbeitest. Wenn du selbst Änderungen vorgenommen hast, erstelle einen neuen branch und stelle einen [pull request](https://github.com/Jugendhackt/MHD-Main/compare) und warte darauf, dass einer der Eigentümer/Mitglieder ihn zusammenführt.
 
 ## 3.0 Fehlerbehebung
 
@@ -139,13 +142,13 @@ Versuche:
 Wenn beide Befehle nicht funktionieren, [installiere pip](https://pip.pypa.io/en/stable/installation/).
 
 ### 3.2 Andere Fehler
-Wenn du andere Fehler, Programm- oder Installationsfehler hast, die wir nicht erwähnt haben, zögere nicht, [ein Problem](https://github.com/MHD-Team/MHD-Main/issues/new) mit dem Tag bug zu öffnen.
+Wenn du andere Fehler, Programm- oder Installationsfehler hast, die wir nicht erwähnt haben, zögere nicht, [ein Problem](https://github.com/Jugendhackt/MHD-Main/issues/new) mit dem Tag bug zu öffnen.
 Oder schreiben Sie eine E-Mail an mhd.team[at]outlook.de
 
 ---
 
 # 4.0 Links
-Github: https://github.com/MHD-Team  
-Lizenz: https://github.com/MHD-Team/MHD-Main/blob/main/LICENSE  
+Github: https://github.com/Jugendhackt/MHD-Main  
+Lizenz: https://github.com/Jugendhackt/MHD-Main/blob/main/LICENSE  
 Discord: https://discord.com/channels/897766520476827669/897766520476827672  
 Jugend Hackt: https://jugendhackt.org/ 
