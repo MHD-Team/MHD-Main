@@ -189,8 +189,7 @@ def login():
             user.id = id_
             login_user(user)
             return redirect("/mhd", code=302)
-        else:
-            flash("Username doesn't exist/Wrong Password")
+        flash("Username doesn't exist/Wrong Password")
 
     return render_template("Einloggen.html")
 
