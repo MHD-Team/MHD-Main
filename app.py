@@ -53,7 +53,7 @@ def count_users():
     cursor = get_db().execute("SELECT MAX(ID) FROM USERS")
     for row in cursor:
         cu = row[0]
-        if cu == None:
+        if cu is None:
             cu = 0
         return cu
     return 0
@@ -171,7 +171,7 @@ def total_points(id):
 
     for row in cursor:
         total = row[0]
-        if total == None:
+        if total is None:
             total = 0
 
         return total
