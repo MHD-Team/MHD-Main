@@ -45,7 +45,6 @@ def delete_from_table(*tables):
 
 
 def delete_user(id, name):
-    global users
     conn.execute(
         "DELETE FROM USERS             WHERE name = '"
         + name
