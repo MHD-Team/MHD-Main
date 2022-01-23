@@ -18,9 +18,8 @@ from flask_login import (  # type:ignore
 )
 from datetime import datetime, date
 import os
-from os.path import join, dirname
 from dotenv import load_dotenv, find_dotenv  # type:ignore
-from filestack import Client, Security, Filelink  # type:ignore
+from filestack import Security, Filelink  # type:ignore
 
 load_dotenv(find_dotenv())
 APIKEY = os.environ.get("APIKEY")
